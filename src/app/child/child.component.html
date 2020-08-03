@@ -1,0 +1,13 @@
+<!-- <p>child works!</p>
+{{PlaceHolder}}
+
+<button class="btn btn-success" (click)="ParentToChild()">Send data</button> -->
+
+<div class="card" style="width: 18rem;">
+    
+    <div class="card-body">
+      <h5 class="card-title">{{userName}}</h5>
+      <input type="text" name="uname" id="uname" class="form-control" placeholder="username" #uname /><br/>
+      <button class="btn btn-success"  (click)="OnCallMethod(uname)">Update Username</button>
+    </div>
+  </div>

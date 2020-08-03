@@ -1,0 +1,27 @@
+<p>splice-push works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" name="" class="form-control" #user placeholder="Uname">
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-success" (click)="onAdd(user)">Add User</button>
+        </div>
+    </div><br/>
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+               <thead class="thead-dark">
+                   <th>Sr No.</th>
+                    <th>User</th>
+                    <th>Operation</th>
+               </thead>
+               <tbody *ngFor="let user of users;index as i">
+                   <td>{{i+1}}</td>
+                   <td>{{user}}</td>
+                   <td><button class="btn btn-danger" (click)="onRemove(i)">Remove</button></td>
+               </tbody>              
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<!-- <div class="col-md-6">
+    <div class="card" style="width: 18rem;">        
+        <div class="card-body">
+            <ng-content select=".card-title"></ng-content>        
+         
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         
+          <ng-content select=".btn"></ng-content>
+        </div>
+      </div>
+</div> -->
+
+<div class="card form-group" style="width: 18rem;">  
+  <div class="card-body">
+    <h5 class="card-title">{{userName}}</h5>
+    <input type="text" name="uname" id="uname" class="form-control" placeholder="username" #uname /><br/>
+    <button class="btn btn-success" (click)="OnCallMethod(uname)">Update Username</button>
+  </div>
+</div>

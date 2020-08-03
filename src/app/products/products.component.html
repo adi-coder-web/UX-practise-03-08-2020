@@ -1,0 +1,64 @@
+<div class="page-area">
+  <div class="text-center">
+    <h2>Buy product</h2>
+  </div>
+  
+  <div class="alert alert-light border d-flex">
+    <strong class="text-success">{{msg}}</strong>
+    <button class="btn btn-success ml-auto">Checkout</button>
+  </div>
+    <hr class="mb-3">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/laptop.jpg" alt="laptop">
+                    <div class="card-body">
+                      <h5 class="card-title">Laptop</h5>
+                      <!-- <p class="card-text">A laptop computer is a portable personal computer powered by a battery.</p> -->
+                      <button class="btn btn-success" (click)="onSelectItem('Laptop')">Select Laptop</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/mobile.jpg" alt="Mobile">
+                    <div class="card-body">
+                      <h5 class="card-title">Moblie</h5>
+                      <!-- <p class="card-text">A mobile phone (also known as a hand phone, cell phone, or cellular telephone) is a small portable radio telephone.</p> -->
+                      <button class="btn btn-success" (click)="onSelectItem('Mobile')">Select Mobile</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/tv.jpg" alt="Television">
+                    <div class="card-body">
+                      <h5 class="card-title">TV</h5>
+                      <!-- <p class="card-text">Television (TV), sometimes shortened to tele or telly, is a telecommunication medium used for transmitting moving images in monochrome.</p> -->
+                      <button class="btn btn-success" (click)="onSelectItem('TV')">Select TV</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="assets/wm.jpg" alt="Washing Machine">
+                  <div class="card-body">
+                    <h5 class="card-title">Washing Machine</h5>
+                    <!-- <p class="card-text">A washing machine is a machine that washes dirty clothes.  These can help make the clothes cleaner.</p> -->
+                    <button class="btn btn-success" (click)="onSelectItem('WM')">Select Washing Machine</button>
+                  </div>
+                </div>
+          </div>
+        </div>
+    </div>
+
+<app-child [PlaceHolder]="PlaceHolderName" (childEmit)="ParentToChild($event)" ></app-child>
+  {{parentinfo}}
+<div class="col-md-12 bg-success text-white text-center py-4">
+    <h2 *ngIf="productitem">Please select product</h2>
+    <h2 *ngIf="promsg">{{promsg}}</h2>
+    <button class="btn" (click)="onAddCart()">Add to cart</button>
+  </div>    
+
+</div> 
